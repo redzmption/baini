@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>首长请打卡</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+	<script type="text/javascript">
+function post(URL, PARAMS) {        
+    var temp = document.createElement("form");        
+    temp.action = URL;        
+    temp.method = "post";        
+    temp.style.display = "none";        
+    for (var x in PARAMS) {        
+        var opt = document.createElement("textarea");        
+        opt.name = x;        
+        opt.value = PARAMS[x];        
+        // alert(opt.name)        
+        temp.appendChild(opt);        
+    }        
+    document.body.appendChild(temp);        
+    temp.submit();        
+    return temp;        
+}             
+    </script>
+    <input type="button" value="首长请打卡" name="s1" onclick="post('http://www.woolaila.com/api/index/signResultsSave', {company_id :'34',device_id:'FECD7705-23F5-479B-955F-337952D3FC2E',user_id:'13957',uuid:'D764D130-5B8A-4426-EF5B-E9383F15F3AD',major:'11985',minor:'11467'});">
+    <input type="button" value="2号首长请打卡" name="s2" onclick="post('http://www.woolaila.com/api/index/signResultsSave', {company_id :'34',device_id:'867982020063617',user_id:'9312',uuid:'D764D130-5B8A-4426-EF5B-E9383F15F3AD',major:'16562',minor:'28172'});">
+    
+</body>
+</html>
